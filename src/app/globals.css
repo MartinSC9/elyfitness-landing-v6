@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D9A3FF;
+  --color-primary-dark: #c084fc;
+  --color-primary-light: #e9d5ff;
+  --color-cream: #FCF3EF;
+  --color-dark: #323130;
+  --color-dark-soft: #4a4948;
+  --color-gray: #6b7280;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+button, a, [role="button"], input[type="submit"], select { cursor: pointer; }
+::selection { background-color: var(--color-primary); color: white; }
+
+/* Scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #c084fc, #D9A3FF, #e9d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marquee cards */
+@keyframes marqueeCards {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+.animate-marquee-cards { animation: marqueeCards 55s linear infinite; }
+@media (min-width: 640px) { .animate-marquee-cards { animation-duration: 30s; } }
+.animate-marquee-cards:hover { animation-play-state: paused; }
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 163, 255, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(217, 163, 255, 0); }
+}
+.pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+
+/* Glow ring */
+@keyframes glowRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217,163,255,0.3); }
+  50% { box-shadow: 0 0 0 4px rgba(217,163,255,0.15), 0 0 25px rgba(217,163,255,0.08); }
+}
+.glow-ring { animation: glowRing 3s ease-in-out infinite; }
+
+/* Gradient line */
+.gradient-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217,163,255,0.3), transparent);
+}
+
+/* Copy animation */
+@keyframes copyPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.copy-pop { animation: copyPop 0.3s ease; }
+
+
+/* Badge pulse */
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.badge-pulse { animation: badgePulse 2s ease-in-out infinite; }
+
+/* Typing dots */
+@keyframes typingDot {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+.typing-dot:nth-child(1) { animation: typingDot 1.4s ease-in-out infinite 0s; }
+.typing-dot:nth-child(2) { animation: typingDot 1.4s ease-in-out infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: typingDot 1.4s ease-in-out infinite 0.4s; }
