@@ -64,7 +64,7 @@ function Navbar() {
             </a>
           ))}
           <a href="#contacto" className="ml-2 inline-flex items-center gap-1.5 bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wide transition-all shadow-sm">
-            Empezar <ArrowRight size={11} />
+            Empezar ahora <ArrowRight size={11} />
           </a>
         </div>
 
@@ -114,7 +114,7 @@ function Hero() {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-white/50 text-sm sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-              Se construye. Con constancia, con un plan real y con alguien que te acompane en cada paso.
+              Se construye. Con constancia, con un plan real y con alguien que te acompañe en cada paso.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-3 mb-10">
@@ -122,15 +122,15 @@ function Hero() {
                 VER PLANES Y PRECIOS <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </MagneticButton>
               <a href="#contacto" className="group inline-flex items-center justify-center gap-2 border border-white/25 text-white/80 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-all">
-                CONTACTAR
+                ESCRÍBEME
               </a>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex justify-center gap-10">
               {[
-                { v: 13, s: '+', l: 'Anos exp.' },
+                { v: 13, s: '+', l: 'Años exp.' },
                 { v: 4, s: 'K+', l: 'Cambios' },
-                { v: 400, s: 'K+', l: 'Comunidad' },
+                { v: 400, s: 'K+', l: 'Seguidores' },
               ].map(s => (
                 <div key={s.l} className="text-center">
                   <div className="text-2xl sm:text-3xl font-black text-white"><NumberTicker value={s.v} suffix={s.s} /></div>
@@ -150,26 +150,26 @@ function Plans() {
   const planes = [
     {
       n: '01', name: 'PREMIUM PLUS', popular: true, img: IMG.gym1,
-      desc: 'Coaching integral: alimentacion + entreno + suplementacion.',
-      bullets: ['Plan 100% personalizado conmigo', 'Chat VIP diario', 'Seguimiento quincenal', 'Ajustes constantes de progreso'],
+      desc: 'Nutrición + entrenamiento + suplementación. Tu plan completo.',
+      bullets: ['Plan 100% personalizado por Ely', 'Chat VIP diario', 'Seguimiento quincenal', 'Ajustes constantes de progreso'],
       highlights: ['Alimentacion', 'Entreno', 'Chat VIP'],
     },
     {
       n: '02', name: 'PREMIUM RUNNING', img: IMG.running,
-      desc: 'Para corredoras: nutricion + entrenamiento para carreras.',
-      bullets: ['Plan personalizado para carreras', 'Chat VIP diario', 'Seguimiento quincenal', '5K, 10K, Maraton, Ultras'],
+      desc: 'Para runners: nutrición + entrenamiento para carreras.',
+      bullets: ['Plan personalizado para carreras', 'Chat VIP diario', 'Seguimiento quincenal', '5K, 10K, Maratón, Ultras'],
       highlights: ['Alimentacion', 'Running', 'Chat VIP'],
     },
     {
       n: '03', name: 'NUTRICION', img: IMG.food2,
-      desc: 'Solo alimentacion y suplementacion personalizada.',
-      bullets: ['Plan alimentacion personalizado', 'Chat VIP diario', 'Seguimiento quincenal', 'Control hambre y saciedad'],
+      desc: 'Alimentación y suplementación 100% personalizada.',
+      bullets: ['Plan de alimentación personalizado', 'Chat VIP diario', 'Seguimiento quincenal', 'Control hambre y saciedad'],
       highlights: ['Alimentacion', 'Chat VIP'],
     },
     {
       n: '04', name: 'TRAINING', img: IMG.gym2,
-      desc: 'Solo entrenamiento personalizado.',
-      bullets: ['Plan entrenamiento personalizado', 'Chat VIP diario', 'Seguimiento quincenal', 'Readaptacion a lesiones'],
+      desc: 'Entrenamiento personalizado adaptado a tus objetivos.',
+      bullets: ['Plan de entrenamiento personalizado', 'Chat VIP diario', 'Seguimiento quincenal', 'Adaptado a lesiones y limitaciones'],
       highlights: ['Entreno', 'Chat VIP'],
     },
   ];
@@ -183,7 +183,7 @@ function Plans() {
             <span className="text-[11px] font-bold text-primary-dark uppercase tracking-wider">Coaching 1 a 1 con Ely</span>
           </motion.div>
           <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-black uppercase">Elige tu <span className="text-gradient">plan</span></motion.h2>
-          <motion.p variants={fadeUp} className="text-dark/40 text-sm mt-2 max-w-md mx-auto">Acompanamiento diario, dieta y entreno adaptado a ti. Sin permanencia.</motion.p>
+          <motion.p variants={fadeUp} className="text-dark/40 text-sm mt-2 max-w-md mx-auto">Acompañamiento diario. Nutrición y entreno adaptado a ti. Sin permanencia.</motion.p>
           <motion.div variants={fadeUp} className="mt-4 inline-flex items-center gap-2 text-sm text-dark/45">
             <span className="w-2 h-2 rounded-full bg-[#34d399] animate-pulse" />
             Plazas limitadas
@@ -242,7 +242,7 @@ function Plans() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2">
-          {['Sin permanencia', 'Chat VIP diario', 'Adaptado a patologias', 'Todo en APP'].map(f => (
+          {['Sin permanencia', 'Chat VIP diario', 'Adaptado a patologías', 'Gestión en APP exclusiva'].map(f => (
             <span key={f} className="inline-flex items-center gap-1.5 bg-white border border-dark/8 px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-medium text-dark/45">
               <Check size={10} className="text-primary" /> {f}
             </span>
@@ -257,11 +257,11 @@ function Plans() {
 function AppSection() {
   const APP_VIDEO = 'https://video.wixstatic.com/video/4cd4b0_d9ff65c4b76343a6988372fccb6cc847/720p/mp4/file.mp4';
   const features = [
-    { t: 'Plan alimentacion', icon: <Utensils size={13} /> },
-    { t: 'Entrenos en video', icon: <Video size={13} /> },
+    { t: 'Plan de alimentación', icon: <Utensils size={13} /> },
+    { t: 'Entrenos en vídeo', icon: <Video size={13} /> },
     { t: 'Recetas cada mes', icon: <Flame size={13} /> },
     { t: 'Comunidad privada', icon: <Users size={13} /> },
-    { t: 'Chat con nutri', icon: <MessageCircle size={13} /> },
+    { t: 'Chat con nutricionista', icon: <MessageCircle size={13} /> },
     { t: 'Lista de la compra', icon: <Clipboard size={13} /> },
   ];
 
@@ -282,7 +282,7 @@ function AppSection() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-black uppercase text-white mb-1">Tu plan a tu ritmo</h2>
-              <p className="text-white/35 text-sm mb-6">Entrenos, recetas y comunidad. Pago unico, sin permanencia.</p>
+              <p className="text-white/35 text-sm mb-6">Entrenos, recetas y comunidad. Pago único, sin permanencia.</p>
 
               <div className="flex flex-wrap items-end gap-5 mb-6">
                 <div>
@@ -316,8 +316,8 @@ function AppSection() {
                 <MagneticButton href="https://www.bejao.fit/checkout?tribeId=381&typeProduct=DIT" target="_blank" className="inline-flex items-center justify-center gap-2 bg-white text-dark px-8 py-3.5 rounded-full font-bold text-sm uppercase hover:bg-cream hover:shadow-lg transition-all group">
                   EMPIEZA YA <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </MagneticButton>
-                <a href="https://calendar.app.google/LINK-VIDEOLLAMADA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-white/15 text-white/50 hover:text-white hover:border-white/30 px-6 py-3.5 rounded-full font-bold text-xs uppercase transition-all">
-                  <CalendarCheck size={13} /> Tengo dudas
+                <a href="#contacto" className="inline-flex items-center gap-2 border border-white/15 text-white/50 hover:text-white hover:border-white/30 px-6 py-3.5 rounded-full font-bold text-xs uppercase transition-all">
+                  Tengo dudas
                 </a>
               </div>
             </div>
@@ -340,19 +340,19 @@ function AppSection() {
 /* =================== COMPARISON TABLE (V6 - NEW, Coaching vs APP side by side) =================== */
 function ComparisonTable() {
   const rows = [
-    { label: 'Que es', coaching: 'Coaching 1 a 1 con Ely', app: 'APP con plan de entreno y recetas' },
-    { label: 'Seguimiento', coaching: 'Chat diario + revision quincenal', app: 'Autonomo, a tu ritmo' },
-    { label: 'Personalizacion', coaching: '100% adaptado a ti', app: 'Planes generales de calidad' },
-    { label: 'Precio', coaching: 'Consultar (mensual/trim/sem)', app: '59 EUR/ano (4,92 EUR/mes)' },
-    { label: 'Ideal para', coaching: 'Resultados rapidos con acompanamiento', app: 'Entrenar por tu cuenta con guia' },
+    { label: 'Qué es', coaching: 'Coaching 1 a 1 con Ely', app: 'APP con plan de entreno y recetas' },
+    { label: 'Seguimiento', coaching: 'Chat diario + revisión quincenal', app: 'A tu ritmo, con guías en vídeo' },
+    { label: 'Personalización', coaching: '100% adaptado a ti', app: 'Planes profesionales estructurados' },
+    { label: 'Precio', coaching: 'Consultar precio', app: '59 EUR/año (4,92 EUR/mes)' },
+    { label: 'Ideal para', coaching: 'Resultados rápidos con acompañamiento', app: 'Entrenar a tu ritmo con guía profesional' },
   ];
 
   return (
     <section className="py-12 sm:py-14 bg-cream">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-8">
-          <motion.h2 variants={fadeUp} className="text-xl sm:text-2xl font-black uppercase">Coaching vs APP — <span className="text-gradient">cual elijo?</span></motion.h2>
-          <motion.p variants={fadeUp} className="text-dark/40 text-xs mt-1">Compara de un vistazo y elige lo que mejor se adapta a ti.</motion.p>
+          <motion.h2 variants={fadeUp} className="text-xl sm:text-2xl font-black uppercase">Coaching vs APP — <span className="text-gradient">¿cuál elijo?</span></motion.h2>
+          <motion.p variants={fadeUp} className="text-dark/40 text-xs mt-1">Compara de un vistazo y elige lo que mejor se adapte a ti.</motion.p>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-2xl border border-dark/8 overflow-hidden shadow-sm">
@@ -515,11 +515,11 @@ function Prozis() {
             <div className="relative flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-center sm:text-left">
                 <h2 className="text-xl sm:text-2xl font-black uppercase text-white"><span className="text-gradient">10% dto</span> en Prozis</h2>
-                <p className="text-white/40 text-xs sm:text-sm mt-0.5">Suplementos, ropa y accesorios con mi codigo exclusivo</p>
+                <p className="text-white/40 text-xs sm:text-sm mt-0.5">Suplementos, ropa y accesorios con mi código exclusivo</p>
               </div>
               <div className="flex items-center gap-3 shrink-0">
                 <button onClick={copyCode} className={`bg-white/10 border-2 border-dashed border-primary/50 rounded-xl px-5 py-2.5 text-center hover:bg-white/15 transition-all ${copied ? 'copy-pop' : ''}`}>
-                  <p className="text-[9px] font-bold uppercase tracking-widest text-white/35 mb-0.5">Codigo</p>
+                  <p className="text-[9px] font-bold uppercase tracking-widest text-white/35 mb-0.5">Código</p>
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-black text-primary tracking-wider">ELY</span>
                     {copied ? <CheckCircle size={14} className="text-[#34d399]" /> : <Copy size={12} className="text-white/25" />}
@@ -582,11 +582,11 @@ function Prozis() {
 function FAQ() {
   const [open, setOpen] = useState(null);
   const faqs = [
-    { q: 'Coaching vs APP, cual es para mi?', a: 'Coaching = seguimiento 1:1 conmigo, chat diario, ajustes constantes. Ideal si quieres resultados rapidos y personalizados. La APP = plan economico con entrenos, recetas y comunidad a tu ritmo (59 euros/ano).' },
-    { q: 'Cuando empiezo a ver resultados?', a: 'La mayoria nota cambios en 2-4 semanas: menos hinchazon, mas energia. Resultados visibles significativos entre 2-3 meses.' },
-    { q: 'Tengo intolerancias, me sirve?', a: 'Adapto absolutamente todo: SIBO, SOP, tiroides, embarazo, lactancia, intolerancias. Reviso tus analiticas para personalizar al 100%.' },
-    { q: 'Hay permanencia?', a: 'No. El coaching no tiene permanencia, puedes cancelar cuando quieras. La APP es pago unico anual.' },
-    { q: 'Como empiezo?', a: 'Completa el formulario de contacto justo abajo, indicame que plan te interesa y tu objetivo. Te respondo en menos de 24 horas.' },
+    { q: '¿Coaching vs APP, cuál es para mí?', a: 'Coaching = seguimiento 1:1 conmigo, chat diario, ajustes constantes. Ideal si quieres resultados rápidos y personalizados. La APP = plan económico con entrenos, recetas y comunidad a tu ritmo (59 euros/año).' },
+    { q: '¿Cuándo empiezo a ver resultados?', a: 'La mayoría nota cambios en 2-4 semanas: menos hinchazón, más energía. Resultados visibles significativos entre 2-3 meses.' },
+    { q: 'Tengo intolerancias, ¿me sirve?', a: 'Adapto absolutamente todo: SIBO, SOP, tiroides, embarazo, lactancia, intolerancias. Reviso tus analíticas para personalizar al 100%.' },
+    { q: '¿Hay permanencia?', a: 'No. El coaching no tiene permanencia, puedes cancelar cuando quieras. La APP es pago único anual.' },
+    { q: '¿Cómo empiezo?', a: 'Completa el formulario de contacto justo abajo o agenda una videollamada gratuita si te interesa el coaching 1 a 1. Indícame qué plan te interesa y tu objetivo. Te respondo en menos de 24 horas.' },
   ];
 
   return (
@@ -631,7 +631,7 @@ function Contact() {
       <div className="relative z-10 max-w-2xl mx-auto px-4 text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
           <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-black uppercase text-white mb-2">Empieza tu <span className="text-gradient">cambio</span></motion.h2>
-          <motion.p variants={fadeUp} className="text-white/40 text-sm mb-6">Elegi tu plan y escribime. Respondo en menos de 24h.</motion.p>
+          <motion.p variants={fadeUp} className="text-white/40 text-sm mb-6">Elige tu plan y escríbeme. Respondo en menos de 24h.</motion.p>
 
           {/* Agendar videollamada - solo coaching 1a1 */}
           <motion.div variants={fadeUp} className="mb-6">
@@ -657,13 +657,13 @@ function Contact() {
               <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
                 <Check size={24} className="text-green-500" />
               </div>
-              <h3 className="text-xl font-black mb-1">Mensaje enviado!</h3>
-              <p className="text-dark/50 text-sm">Te respondere en menos de 24 horas.</p>
+              <h3 className="text-xl font-black mb-1">¡Mensaje enviado!</h3>
+              <p className="text-dark/50 text-sm">Te responderé en menos de 24 horas.</p>
             </motion.div>
           ) : (
             <motion.form key="form" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="bg-white rounded-2xl p-6 sm:p-8 space-y-3 text-left shadow-2xl" onSubmit={handleSubmit}>
               <div className="flex flex-wrap gap-2 mb-1">
-                {['Respuesta < 24h', 'Sin compromiso', '+4K confian'].map(t => (
+                {['Respuesta < 24h', 'Sin compromiso', '+4.000 confían en Ely'].map(t => (
                   <span key={t} className="inline-flex items-center gap-1 text-[9px] font-bold text-dark/30 bg-cream px-2 py-0.5 rounded-full">
                     <Check size={8} className="text-[#34d399]" /> {t}
                   </span>
@@ -674,11 +674,11 @@ function Contact() {
                 <motion.input variants={fadeUp} type="email" placeholder="Tu e-mail" required className="bg-cream border border-dark/8 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/15 w-full transition-all placeholder:text-dark/30" />
               </div>
               <motion.select variants={fadeUp} className="bg-cream border border-dark/8 rounded-xl px-4 py-3 text-sm text-dark/50 focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/15 w-full transition-all">
-                <option>Que plan te interesa?</option>
+                <option>¿Qué plan te interesa?</option>
                 <option>Premium Plus</option><option>Premium Running</option><option>Nutricion</option><option>Training</option>
                 <option>ElyFitness APP (59&#8364;/ano)</option><option>Pack Duo (69&#8364;/ano)</option><option>Otra consulta</option>
               </motion.select>
-              <motion.textarea variants={fadeUp} rows={3} placeholder="Cuentame tu objetivo..." className="bg-cream border border-dark/8 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/15 w-full resize-none transition-all placeholder:text-dark/30" />
+              <motion.textarea variants={fadeUp} rows={3} placeholder="Cuéntame tu objetivo..." className="bg-cream border border-dark/8 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/15 w-full resize-none transition-all placeholder:text-dark/30" />
               <motion.div variants={fadeUp} className="text-center pt-1">
                 <button type="submit" className="group bg-primary hover:bg-primary-dark text-white px-10 py-3.5 rounded-full font-bold text-sm uppercase inline-flex items-center gap-2 transition-all shadow-lg shadow-primary/25">
                   <Send size={13} /> Enviar mensaje
@@ -706,7 +706,7 @@ function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="text-base font-black">Newsletter de Ely</h3>
-              <p className="text-white/35 text-xs">Consejos de nutricion y entreno cada semana.</p>
+              <p className="text-white/35 text-xs">Consejos de nutrición y entreno cada semana.</p>
             </div>
             <form onSubmit={handleSub} className="flex gap-2 w-full sm:w-auto">
               {sub ? (
@@ -728,7 +728,7 @@ function Footer() {
               <span className="text-lg font-black">ELY</span>
               <span className="text-[7px] font-bold uppercase leading-tight text-primary">FITNESS<br />&amp; NUTRITION</span>
             </div>
-            <p className="text-white/35 text-[11px] leading-relaxed max-w-[200px]">Dietista y Entrenadora Personal IFBB. +13 anos online.</p>
+            <p className="text-white/35 text-[11px] leading-relaxed max-w-[200px]">Dietista y Entrenadora Personal IFBB. +13 años ayudando online.</p>
             <div className="flex items-center gap-1.5 text-white/25 text-[10px] mt-2"><MapPin size={10} /> Espana - Online</div>
           </div>
           <div>
@@ -754,7 +754,7 @@ function Footer() {
                 <a key={i} href={r.url} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/8 hover:bg-primary/20 flex items-center justify-center text-white/50 hover:text-primary transition-all">{r.icon}</a>
               ))}
             </div>
-            <p className="text-white/30 text-[10px]">Codigo <span className="text-primary font-bold">ELY</span> 10% dto en <a href="https://www.prozis.com/es/es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prozis</a></p>
+            <p className="text-white/30 text-[10px]">Código <span className="text-primary font-bold">ELY</span> 10% dto en <a href="https://www.prozis.com/es/es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prozis</a></p>
           </div>
         </div>
 
@@ -787,7 +787,7 @@ function ChatWidget() {
         {open && (
           <motion.div initial={{ opacity: 0, y: 8, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 8, scale: 0.95 }} className="absolute bottom-14 right-0 w-64 bg-white rounded-xl shadow-2xl border border-dark/10 overflow-hidden mb-2">
             <div className="bg-dark p-3.5">
-              <p className="text-white font-bold text-sm">En que te ayudo?</p>
+              <p className="text-white font-bold text-sm">¿En qué te ayudo?</p>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#34d399]" />
                 <span className="text-white/35 text-[10px]">Online</span>
@@ -848,7 +848,7 @@ function NewsletterModal() {
                         <Check size={28} className="text-green-500" />
                       </div>
                       <h3 className="text-xl font-black mb-2 text-dark">Bienvenid@!</h3>
-                      <p className="text-sm text-dark/45">Revisa tu email para confirmar la suscripcion.</p>
+                      <p className="text-sm text-dark/45">Revisa tu email para confirmar la suscripción.</p>
                     </motion.div>
                   ) : (
                     <motion.div key="form">
@@ -859,10 +859,10 @@ function NewsletterModal() {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-primary-dark">Exclusivo</span>
                       </div>
                       <h3 className="text-2xl sm:text-3xl font-black leading-tight mb-4 text-dark">
-                        Recupera tu energia, salud y bienestar
+                        Consejos reales para transformar tu cuerpo y tu salud
                       </h3>
                       <p className="text-sm text-dark/45 mb-6 leading-relaxed">
-                        Apuntate a mi newsletter y recibe consejos reales y practicos sobre alimentacion, entrenamiento y autocuidado.
+                        Apúntate a mi newsletter y recibe consejos prácticos sobre alimentación, entrenamiento y autocuidado.
                       </p>
                       <form onSubmit={handleSubscribe} className="space-y-3">
                         <input type="text" placeholder="Tu nombre" required className="w-full bg-white border border-dark/8 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/30 placeholder:text-dark/35" />
