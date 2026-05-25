@@ -43,7 +43,7 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: '#planes', label: 'PLANES' },
+    { href: '#plan-ultra', label: 'PLANES' },
     { href: '#resultados', label: 'RESULTADOS' },
     { href: '#prozis', label: 'PROZIS' },
     { href: '#contacto', label: 'CONTACTO' },
@@ -52,9 +52,26 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-400 ${scrolled ? 'bg-[#FCF3EF]/90 backdrop-blur-xl border-b border-dark/8 shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
-        <a href="#" className="flex items-center gap-2">
-          <span className={`text-xl font-black tracking-tight transition-colors ${scrolled ? 'text-dark' : 'text-white'}`}>ELY</span>
-          <span className={`text-[7px] font-bold uppercase leading-tight transition-colors ${scrolled ? 'text-primary-dark' : 'text-primary'}`}>FITNESS<br />&amp; NUTRITION</span>
+        <a href="#" className="flex items-center">
+          <svg className={`h-8 w-auto transition-all ${scrolled ? '[&_path]:fill-[#1d1d1b]' : '[&_path]:fill-white'}`} preserveAspectRatio="xMidYMid meet" viewBox="58.667 144.7 383.471 210.7" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M58.667 312.597v-123h49.3v23.8h-24.2v23.9h23.2v23.2h-23.2v28.2h25.8v23.9h-50.9z" />
+              <path d="M117.666 312.597v-123h49.3v23.9h-24.6v19.6h23.2v23.7h-23.2v56h-24.8v-.2z" />
+              <path d="M106.8 144.7v24.9h-1.1v-24.9h1.1z" />
+              <path d="M194.3 215.9c.4-1.8-.1-3.4-2.5-3.6-1-.1-1.9.2-2.8.4-1.8.4-3.4 1.3-4.7 2.6-.6.4-1 .9-1.7 1.4-.1-.3-.1-.4-.2-.6-.3-1.5-1-3-2.1-4.2-.4-.6-1-1-1.7-1.5-.2-.2-.7-.2-.9-.2-1 .3-1.8.9-2.1 1.9-.2.7-.4 1.4-.4 2.1-.1 3.1.1 6.1 1.5 8.9.7 1.2 1.2 2.4 1.8 3.6s1.2 2.3 2.1 3.4c.8 1 1.4 1.1 2.3.2.9-.8 1.7-1.7 2.5-2.5 2-2 3.6-4.1 5.3-6.4.9-1.2 1.7-2.5 2.5-3.7.5-.6 1-1.1 1.1-1.8z" />
+              <path d="M227.258 269.115v1.8h-13.3v-19.8h13.1v1.6h-11.1v7.2h9.7v1.6h-9.7v7.5h11.3z" />
+              <path d="M250.826 270.915v-19.8h2v18h11.5v1.8h-13.5z" />
+              <path d="m287.063 251.115 6.4 10.6 6.6-10.6h2.1l-7.7 12.4v7.4h-2v-7.4l-7.7-12.3h2.3v-.1z" />
+              <path d="M214.021 313.415v-19.8h12.9v1.6h-11v7.2h9.3v1.6h-9.3v9.2h-2v.2z" />
+              <path d="M250.234 313.415v-19.8h2v19.8h-2z" />
+              <path d="M290.9 295.415h-7v18h-2v-18h-7v-1.6H291v1.6z" />
+              <path d="M315.78 297.415v16.2h-2v-20h1.5l13.1 16.4v-16.4h2v19.8h-1.6l-13-16z" />
+              <path d="M368.427 311.615v1.8h-13.3v-19.8h13.1v1.6h-11.1v7.2h9.7v1.6h-9.7v7.5h11.3z" />
+              <path d="M403.596 297.415c-.5-.7-1.3-1.1-2.3-1.5-1-.3-2-.7-3.1-.7-1.8 0-2.9.3-3.8 1-.8.7-1.1 1.6-1.1 2.6 0 .7.2 1.1.3 1.5.2.3.5.7 1 1 .5.3 1 .5 1.6.7.7.2 1.5.3 2.5.7 1 .2 2 .5 2.8.8s1.6.7 2.1 1c.7.3 1 1 1.3 1.5.3.7.5 1.3.5 2.3 0 1-.2 1.6-.5 2.5-.3.7-.8 1.1-1.5 1.6s-1.5.8-2.3 1c-.8.2-1.8.3-2.8.3-3.1 0-5.7-1-8-2.9l1-1.6c.3.3.8.8 1.3 1.1s1 .7 1.6.8c.7.3 1.3.5 2 .7.7.2 1.5.2 2.1.2 1.6 0 2.8-.3 3.6-.8.8-.5 1.3-1.5 1.3-2.6 0-.7-.2-1.1-.3-1.5-.3-.5-.7-.8-1.1-1.1-.5-.3-1.1-.7-1.8-.8-.7-.2-1.6-.5-2.6-.7-1-.3-2-.5-2.8-.8-.8-.3-1.5-.5-2-1-.5-.3-1-.8-1.1-1.5-.3-.5-.3-1.1-.3-2 0-1 .2-1.6.5-2.5.3-.7.8-1.3 1.5-1.8s1.3-.8 2.3-1.1c.8-.3 1.8-.3 2.9-.3 1.3 0 2.5.2 3.4.7 1 .3 2 1 2.8 1.6l-1 1.6z" />
+              <path d="M440.338 297.415c-.5-.7-1.3-1.1-2.3-1.5-1-.3-2-.7-3.1-.7-1.8 0-2.9.3-3.8 1-.8.7-1.1 1.6-1.1 2.6 0 .7.2 1.1.3 1.5.2.3.5.7 1 1 .5.3 1 .5 1.6.7.7.2 1.5.3 2.5.7 1 .2 2 .5 2.8.8s1.6.7 2.1 1c.7.3 1 1 1.3 1.5.3.7.5 1.3.5 2.3 0 1-.2 1.6-.5 2.5-.3.7-.8 1.1-1.5 1.6s-1.5.8-2.3 1c-.8.2-1.8.3-2.8.3-3.1 0-5.7-1-8-2.9l1-1.6c.3.3.8.8 1.3 1.1s1 .7 1.6.8c.7.3 1.3.5 2 .7.7.2 1.5.2 2.1.2 1.6 0 2.8-.3 3.6-.8.8-.5 1.3-1.5 1.3-2.6 0-.7-.2-1.1-.3-1.5-.3-.5-.7-.8-1.1-1.1-.5-.3-1.1-.7-1.8-.8-.7-.2-1.6-.5-2.6-.7-1-.3-2-.5-2.8-.8-.8-.3-1.5-.5-2-1-.5-.3-1-.8-1.1-1.5-.3-.5-.3-1.1-.3-2 0-1 .2-1.6.5-2.5.3-.7.8-1.3 1.5-1.8s1.3-.8 2.3-1.1c.8-.3 1.8-.3 2.9-.3 1.3 0 2.5.2 3.4.7 1 .3 2 1 2.8 1.6l-1 1.6z" />
+              <path d="M106.8 330.5v24.9h-1.1v-24.9h1.1z" />
+            </g>
+          </svg>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
@@ -118,7 +135,7 @@ function Hero() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-3 mb-10">
-              <MagneticButton href="#planes" className="group inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40">
+              <MagneticButton href="#plan-ultra" className="group inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40">
                 VER PLANES Y PRECIOS <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </MagneticButton>
               <a href="#contacto" className="group inline-flex items-center justify-center gap-2 border border-white/25 text-white/80 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-all">
@@ -175,7 +192,7 @@ function Plans() {
   ];
 
   return (
-    <section id="planes" className="py-16 sm:py-20 bg-cream">
+    <section id="plan-ultra" className="py-16 sm:py-20 bg-cream scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-12">
           <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 border border-primary/15 rounded-full px-4 py-1.5 mb-4">
@@ -266,7 +283,7 @@ function AppSection() {
   ];
 
   return (
-    <section id="app" className="py-16 sm:py-20 relative overflow-hidden">
+    <section id="plan-anual" className="py-16 sm:py-20 relative overflow-hidden scroll-mt-16">
       <div className="absolute inset-0">
         <img src={IMG.gym3} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-dark/88" />
@@ -355,51 +372,93 @@ function ComparisonTable() {
           <motion.p variants={fadeUp} className="text-dark/40 text-xs mt-1">Compara de un vistazo y elige lo que mejor se adapte a ti.</motion.p>
         </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-2xl border border-dark/8 overflow-hidden shadow-sm">
-          {/* Header */}
-          <div className="grid grid-cols-[1fr_1fr_1fr] border-b border-dark/8">
-            <div className="p-3 sm:p-4" />
-            <div className="p-3 sm:p-4 text-center border-l border-dark/8 bg-primary/5">
-              <div className="inline-flex items-center gap-1.5 mb-1">
-                <Crown size={11} className="text-primary-dark" />
-                <span className="text-[10px] sm:text-xs font-black uppercase text-primary-dark">Coaching</span>
-              </div>
-              <p className="text-[9px] text-dark/30 hidden sm:block">Personalizado 1 a 1</p>
-            </div>
-            <div className="p-3 sm:p-4 text-center border-l border-dark/8">
-              <div className="inline-flex items-center gap-1.5 mb-1">
-                <Download size={11} className="text-dark/50" />
-                <span className="text-[10px] sm:text-xs font-black uppercase text-dark/70">APP</span>
-              </div>
-              <p className="text-[9px] text-dark/30 hidden sm:block">Entrena a tu ritmo</p>
-            </div>
-          </div>
-
-          {/* Rows */}
-          {rows.map((r, i) => (
-            <div key={r.label} className={`grid grid-cols-[1fr_1fr_1fr] ${i < rows.length - 1 ? 'border-b border-dark/5' : ''}`}>
-              <div className="p-3 sm:p-4 flex items-center">
-                <span className="text-[10px] sm:text-xs font-bold text-dark/50 uppercase tracking-wide">{r.label}</span>
-              </div>
-              <div className="p-3 sm:p-4 border-l border-dark/5 bg-primary/[0.02]">
-                <span className="text-[10px] sm:text-xs text-dark/60 leading-snug">{r.coaching}</span>
-              </div>
-              <div className="p-3 sm:p-4 border-l border-dark/5">
-                <span className="text-[10px] sm:text-xs text-dark/60 leading-snug">{r.app}</span>
+        {/* Mobile: 2 cards */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="sm:hidden grid grid-cols-2 gap-3">
+          <div className="bg-white rounded-2xl border border-primary/20 overflow-hidden shadow-sm">
+            <div className="bg-primary/5 px-4 py-3 text-center">
+              <div className="inline-flex items-center gap-1.5">
+                <Crown size={13} className="text-primary-dark" />
+                <span className="text-xs font-black uppercase text-primary-dark">Coaching</span>
               </div>
             </div>
-          ))}
-
-          {/* CTA row */}
-          <div className="grid grid-cols-[1fr_1fr_1fr] border-t border-dark/8 bg-cream/50">
-            <div className="p-3 sm:p-4" />
-            <div className="p-3 sm:p-4 border-l border-dark/8 text-center">
-              <a href="#contacto" className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase transition-all">
+            <div className="p-4 space-y-3">
+              {rows.map(r => (
+                <div key={r.label}>
+                  <p className="text-[9px] font-bold text-primary-dark uppercase tracking-wider mb-0.5">{r.label}</p>
+                  <p className="text-xs text-dark/70 leading-snug">{r.coaching}</p>
+                </div>
+              ))}
+            </div>
+            <div className="px-4 pb-4">
+              <a href="#contacto" className="flex items-center justify-center gap-1.5 bg-primary hover:bg-primary-dark text-white py-2.5 rounded-full text-[11px] font-bold uppercase transition-all w-full">
                 Consultar <ArrowRight size={10} />
               </a>
             </div>
-            <div className="p-3 sm:p-4 border-l border-dark/8 text-center">
-              <a href="https://www.bejao.fit/checkout?tribeId=381&typeProduct=DIT" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-dark hover:bg-dark-soft text-white px-4 py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase transition-all">
+          </div>
+          <div className="bg-white rounded-2xl border border-dark/8 overflow-hidden shadow-sm">
+            <div className="bg-dark/5 px-4 py-3 text-center">
+              <div className="inline-flex items-center gap-1.5">
+                <Download size={13} className="text-dark/70" />
+                <span className="text-xs font-black uppercase text-dark/80">APP</span>
+              </div>
+            </div>
+            <div className="p-4 space-y-3">
+              {rows.map(r => (
+                <div key={r.label}>
+                  <p className="text-[9px] font-bold text-dark/50 uppercase tracking-wider mb-0.5">{r.label}</p>
+                  <p className="text-xs text-dark/70 leading-snug">{r.app}</p>
+                </div>
+              ))}
+            </div>
+            <div className="px-4 pb-4">
+              <a href="https://www.bejao.fit/checkout?tribeId=381&typeProduct=DIT" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 bg-dark hover:bg-dark-soft text-white py-2.5 rounded-full text-[11px] font-bold uppercase transition-all w-full">
+                59&#8364;/ano <ArrowRight size={10} />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Desktop: table */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="hidden sm:block bg-white rounded-2xl border border-dark/8 overflow-hidden shadow-sm">
+          <div className="grid grid-cols-[1fr_1fr_1fr] border-b border-dark/8">
+            <div className="p-4" />
+            <div className="p-4 text-center border-l border-dark/8 bg-primary/5">
+              <div className="inline-flex items-center gap-1.5 mb-1">
+                <Crown size={11} className="text-primary-dark" />
+                <span className="text-xs font-black uppercase text-primary-dark">Coaching</span>
+              </div>
+              <p className="text-[9px] text-dark/30">Personalizado 1 a 1</p>
+            </div>
+            <div className="p-4 text-center border-l border-dark/8">
+              <div className="inline-flex items-center gap-1.5 mb-1">
+                <Download size={11} className="text-dark/50" />
+                <span className="text-xs font-black uppercase text-dark/70">APP</span>
+              </div>
+              <p className="text-[9px] text-dark/30">Entrena a tu ritmo</p>
+            </div>
+          </div>
+          {rows.map((r, i) => (
+            <div key={r.label} className={`grid grid-cols-[1fr_1fr_1fr] ${i < rows.length - 1 ? 'border-b border-dark/5' : ''}`}>
+              <div className="p-4 flex items-center">
+                <span className="text-xs font-bold text-dark/50 uppercase tracking-wide">{r.label}</span>
+              </div>
+              <div className="p-4 border-l border-dark/5 bg-primary/[0.02]">
+                <span className="text-xs text-dark/60 leading-snug">{r.coaching}</span>
+              </div>
+              <div className="p-4 border-l border-dark/5">
+                <span className="text-xs text-dark/60 leading-snug">{r.app}</span>
+              </div>
+            </div>
+          ))}
+          <div className="grid grid-cols-[1fr_1fr_1fr] border-t border-dark/8 bg-cream/50">
+            <div className="p-4" />
+            <div className="p-4 border-l border-dark/8 text-center">
+              <a href="#contacto" className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-xs font-bold uppercase transition-all">
+                Consultar <ArrowRight size={10} />
+              </a>
+            </div>
+            <div className="p-4 border-l border-dark/8 text-center">
+              <a href="https://www.bejao.fit/checkout?tribeId=381&typeProduct=DIT" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-dark hover:bg-dark-soft text-white px-4 py-2 rounded-full text-xs font-bold uppercase transition-all">
                 59&#8364;/ano <ArrowRight size={10} />
               </a>
             </div>
@@ -431,7 +490,7 @@ function Transformations() {
   ];
 
   return (
-    <section id="resultados" className="py-14 sm:py-16 bg-cream overflow-hidden">
+    <section id="resultados" className="scroll-mt-16 py-14 sm:py-16 bg-cream overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
@@ -507,7 +566,7 @@ function Prozis() {
   const scroll = (dir) => { scrollRef.current?.scrollBy({ left: dir * 216, behavior: 'smooth' }); };
 
   return (
-    <section id="prozis" className="py-12 sm:py-14 bg-cream">
+    <section id="prozis" className="scroll-mt-16 py-12 sm:py-14 bg-cream">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-6">
           <div className="bg-dark rounded-2xl p-5 sm:p-6 relative overflow-hidden">
@@ -623,7 +682,7 @@ function Contact() {
   const handleSubmit = (e) => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 5000); };
 
   return (
-    <section id="contacto" className="relative py-16 sm:py-20 overflow-hidden">
+    <section id="contacto" className="scroll-mt-16 relative py-16 sm:py-20 overflow-hidden">
       <div className="absolute inset-0">
         <img src={IMG.community} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-dark/82" />
@@ -735,8 +794,8 @@ function Footer() {
             <p className="text-[9px] font-bold uppercase text-white/40 mb-3 tracking-widest">Links</p>
             <div className="space-y-1.5">
               {[
-                { href: '#planes', label: 'Planes' },
-                { href: '#app', label: 'APP Fitness' },
+                { href: '#plan-ultra', label: 'Planes' },
+                { href: '#plan-anual', label: 'APP Fitness' },
                 { href: '#resultados', label: 'Resultados' },
                 { href: '#prozis', label: 'Prozis' },
                 { href: '#contacto', label: 'Contacto' },
@@ -764,7 +823,10 @@ function Footer() {
             <a href="#" className="hover:text-white/50">Privacidad</a>
             <a href="#" className="hover:text-white/50">Cookies</a>
           </div>
-          <p>&copy; {new Date().getFullYear()} ELY FITNESS</p>
+          <div className="flex items-center gap-2">
+            <span>&copy; {new Date().getFullYear()}</span>
+            <svg className="h-4 w-auto [&_path]:fill-white/30" preserveAspectRatio="xMidYMid meet" viewBox="58.667 144.7 383.471 210.7" xmlns="http://www.w3.org/2000/svg"><g><path d="M58.667 312.597v-123h49.3v23.8h-24.2v23.9h23.2v23.2h-23.2v28.2h25.8v23.9h-50.9z"/><path d="M117.666 312.597v-123h49.3v23.9h-24.6v19.6h23.2v23.7h-23.2v56h-24.8v-.2z"/><path d="M106.8 144.7v24.9h-1.1v-24.9h1.1z"/><path d="M194.3 215.9c.4-1.8-.1-3.4-2.5-3.6-1-.1-1.9.2-2.8.4-1.8.4-3.4 1.3-4.7 2.6-.6.4-1 .9-1.7 1.4-.1-.3-.1-.4-.2-.6-.3-1.5-1-3-2.1-4.2-.4-.6-1-1-1.7-1.5-.2-.2-.7-.2-.9-.2-1 .3-1.8.9-2.1 1.9-.2.7-.4 1.4-.4 2.1-.1 3.1.1 6.1 1.5 8.9.7 1.2 1.2 2.4 1.8 3.6s1.2 2.3 2.1 3.4c.8 1 1.4 1.1 2.3.2.9-.8 1.7-1.7 2.5-2.5 2-2 3.6-4.1 5.3-6.4.9-1.2 1.7-2.5 2.5-3.7.5-.6 1-1.1 1.1-1.8z"/><path d="M227.258 269.115v1.8h-13.3v-19.8h13.1v1.6h-11.1v7.2h9.7v1.6h-9.7v7.5h11.3z"/><path d="M250.826 270.915v-19.8h2v18h11.5v1.8h-13.5z"/><path d="m287.063 251.115 6.4 10.6 6.6-10.6h2.1l-7.7 12.4v7.4h-2v-7.4l-7.7-12.3h2.3v-.1z"/><path d="M214.021 313.415v-19.8h12.9v1.6h-11v7.2h9.3v1.6h-9.3v9.2h-2v.2z"/><path d="M250.234 313.415v-19.8h2v19.8h-2z"/><path d="M290.9 295.415h-7v18h-2v-18h-7v-1.6H291v1.6z"/><path d="M315.78 297.415v16.2h-2v-20h1.5l13.1 16.4v-16.4h2v19.8h-1.6l-13-16z"/><path d="M368.427 311.615v1.8h-13.3v-19.8h13.1v1.6h-11.1v7.2h9.7v1.6h-9.7v7.5h11.3z"/><path d="M403.596 297.415c-.5-.7-1.3-1.1-2.3-1.5-1-.3-2-.7-3.1-.7-1.8 0-2.9.3-3.8 1-.8.7-1.1 1.6-1.1 2.6 0 .7.2 1.1.3 1.5.2.3.5.7 1 1 .5.3 1 .5 1.6.7.7.2 1.5.3 2.5.7 1 .2 2 .5 2.8.8s1.6.7 2.1 1c.7.3 1 1 1.3 1.5.3.7.5 1.3.5 2.3 0 1-.2 1.6-.5 2.5-.3.7-.8 1.1-1.5 1.6s-1.5.8-2.3 1c-.8.2-1.8.3-2.8.3-3.1 0-5.7-1-8-2.9l1-1.6c.3.3.8.8 1.3 1.1s1 .7 1.6.8c.7.3 1.3.5 2 .7.7.2 1.5.2 2.1.2 1.6 0 2.8-.3 3.6-.8.8-.5 1.3-1.5 1.3-2.6 0-.7-.2-1.1-.3-1.5-.3-.5-.7-.8-1.1-1.1-.5-.3-1.1-.7-1.8-.8-.7-.2-1.6-.5-2.6-.7-1-.3-2-.5-2.8-.8-.8-.3-1.5-.5-2-1-.5-.3-1-.8-1.1-1.5-.3-.5-.3-1.1-.3-2 0-1 .2-1.6.5-2.5.3-.7.8-1.3 1.5-1.8s1.3-.8 2.3-1.1c.8-.3 1.8-.3 2.9-.3 1.3 0 2.5.2 3.4.7 1 .3 2 1 2.8 1.6l-1 1.6z"/><path d="M440.338 297.415c-.5-.7-1.3-1.1-2.3-1.5-1-.3-2-.7-3.1-.7-1.8 0-2.9.3-3.8 1-.8.7-1.1 1.6-1.1 2.6 0 .7.2 1.1.3 1.5.2.3.5.7 1 1 .5.3 1 .5 1.6.7.7.2 1.5.3 2.5.7 1 .2 2 .5 2.8.8s1.6.7 2.1 1c.7.3 1 1 1.3 1.5.3.7.5 1.3.5 2.3 0 1-.2 1.6-.5 2.5-.3.7-.8 1.1-1.5 1.6s-1.5.8-2.3 1c-.8.2-1.8.3-2.8.3-3.1 0-5.7-1-8-2.9l1-1.6c.3.3.8.8 1.3 1.1s1 .7 1.6.8c.7.3 1.3.5 2 .7.7.2 1.5.2 2.1.2 1.6 0 2.8-.3 3.6-.8.8-.5 1.3-1.5 1.3-2.6 0-.7-.2-1.1-.3-1.5-.3-.5-.7-.8-1.1-1.1-.5-.3-1.1-.7-1.8-.8-.7-.2-1.6-.5-2.6-.7-1-.3-2-.5-2.8-.8-.8-.3-1.5-.5-2-1-.5-.3-1-.8-1.1-1.5-.3-.5-.3-1.1-.3-2 0-1 .2-1.6.5-2.5.3-.7.8-1.3 1.5-1.8s1.3-.8 2.3-1.1c.8-.3 1.8-.3 2.9-.3 1.3 0 2.5.2 3.4.7 1 .3 2 1 2.8 1.6l-1 1.6z"/><path d="M106.8 330.5v24.9h-1.1v-24.9h1.1z"/></g></svg>
+          </div>
         </div>
       </div>
     </footer>
@@ -777,7 +839,7 @@ function ChatWidget() {
   const options = [
     { label: 'Videollamada Coaching 1a1', href: 'https://calendar.app.google/LINK-VIDEOLLAMADA', external: true, icon: <CalendarCheck size={12} /> },
     { label: 'Quiero contratar un plan', href: '#contacto', icon: <Sparkles size={12} /> },
-    { label: 'Ver planes y precios', href: '#planes', icon: <Crown size={12} /> },
+    { label: 'Ver planes y precios', href: '#plan-ultra', icon: <Crown size={12} /> },
     { label: 'Enviar email', href: 'mailto:contacta@elyfitness.es', external: true, icon: <Mail size={12} /> },
   ];
 
